@@ -1,0 +1,415 @@
+@media screen and (max-width: 1200px) {
+  .headerRow {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #header {
+    position: static;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #fff;
+    text-align: left;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0;
+  }
+
+  #header .headerRow {
+    display: block;
+    /* justify-content: space-between; */
+  }
+
+  #header h1 {
+    /* float: left; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    width: 100%;
+    border-bottom: 1px solid #efefef;
+  }
+
+  #header .menuOpen {
+    display: block;
+    /* float: right; */
+    /* height: 78px;
+    line-height: 78px; */
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  #header .nav {
+    /* float: left; */
+    display: block;
+    width: 100%;
+  }
+
+  #header .nav .depth1 {
+    display: block;
+  }
+
+  #header .nav .depth1 > li {
+    width: 100%;
+    /* float: left; */
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 18px;
+    position: relative;
+  }
+
+  #header .nav li > a {
+    display: block;
+    height: 100%;
+    line-height: 30px;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+    border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+  }
+
+  #header .nav li > a::after {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 8px;
+    font-family: "FontAwesome";
+    content: "\f107";
+    opacity: 0.3;
+  }
+
+  #header .nav .depth1 > li > a:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #header .nav .depth2 {
+    position: static;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 13px;
+    color: #222;
+    background: #fff;
+    display: block;
+  }
+
+  #header .nav .depth1 > li:hover .depth2 {
+    display: block;
+  }
+
+  #header .nav .depth2 > li > a {
+    display: block;
+    height: 100%;
+    line-height: 30px;
+    transition: 300ms ease-out 0ms;
+    border-top: 0px solid #fff;
+    margin: 0;
+    padding: 10px 30px 10px 38px;
+    border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+  }
+
+  #header .nav .depth2 > li > a:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  /* slide */
+  #section .slide .text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #444;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  #section .slide .text p {
+    margin: 40px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #444;
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  /* introduction */
+  #section .goodsInfo .row {
+    max-width: 100%;
+    /* overflow: hidden; */
+    display: block;
+    /* justify-content: space-between; */
+  }
+
+  #section .introduction .row .photo ul {
+    display: block;
+    text-align: center;
+  }
+
+  #section .introduction .row .photo ul li {
+    /* float: left;
+    width: 100%; */
+    margin: 0 auto;
+  }
+
+  #section .introduction .row .photo .text p {
+    font-size: 12px;
+    letter-spacing: -1px;
+  }
+
+  #section .goodsInfo .videoBox {
+    /* float: left; */
+    width: 100%;
+  }
+
+  #section .goodsInfo .videoBox > iframe {
+    height: 60vw;
+  }
+
+  #section .goodsInfo .goodsExplantion {
+    /* float: left; */
+    /* width: 100%; */
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    letter-spacing: -1px;
+    padding: 10px;
+  }
+
+  #section .goodsInfo .goodsExplantion p.textLine {
+    margin: 50px 15% 0 0;
+  }
+
+  #section .goodsInfo .goodsExplantion p.goodsName {
+    font-size: 28px;
+    color: #1a1a1a;
+    margin: 10px 15% 0 0;
+    line-height: 55px;
+  }
+
+  #section .goodsInfo .goodsExplantion p.text1 {
+    font-size: 16px;
+    color: #222;
+    margin: 30px 15% 0 0;
+    line-height: 40px;
+  }
+
+  #section .goodsInfo .goodsExplantion p.text2 {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 15% 0 0;
+    letter-spacing: -1px;
+    line-height: 28px;
+    /* 단어 잘림 허용 안함 */
+    word-break: keep-all;
+  }
+
+  #section .goodsInfo .goodsExplantion > a {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin: 70px 15% 0 0;
+  }
+
+  /* businessArea */
+  #section .businessArea .businessAreaText .topText {
+    font-size: 28px;
+    line-height: 50px;
+  }
+
+  #section .businessArea .businessAreaText .midText {
+    font-size: 13px;
+    line-height: 28px;
+    margin: 20px 0 0;
+  }
+
+  /* product */
+  #section .product .row .productImg ul {
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #section .product .row .productImg ul li {
+    /* float: left; */
+    /* width: 50%; */
+    padding: 10px;
+    flex: 1 1 50%;
+  }
+
+  #section .product .row .productImg ul li img {
+    width: 100%;
+    transition: all 0.5s;
+    transform-origin: center top;
+  }
+
+  /* service */
+  #section .service {
+    background: url(../images/banner04.jpg) right center / cover;
+    text-align: center;
+    width: 100%;
+    height: 580px;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    color: #333;
+    letter-spacing: -1px;
+  }
+
+  #section .service div.text1 {
+    font-size: 28px;
+    line-height: 50px;
+    padding: 110px 0 0;
+  }
+
+  #section .service div.text2 {
+    font-size: 13px;
+    line-height: 28px;
+    padding: 20px 0 0;
+  }
+
+  /* mapInfo */
+  #section .mapInfo {
+    padding: 0 10px;
+  }
+
+  #section .mapInfo .row {
+    display: block;
+    /* justify-content: space-between; */
+  }
+
+  #section .mapInfo .map {
+    /* float: left; */
+    width: 100%;
+    height: 379px;
+    padding: 0;
+    margin: 0;
+  }
+
+  #section .mapInfo > .row {
+    margin: -230px auto 0;
+    max-width: 1200px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  #section .mapInfo .info {
+    /* float: right; */
+    /* width: 100%; */
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    color: #333;
+    letter-spacing: -1px;
+    padding-top: 5%;
+  }
+
+  #section .mapInfo .info .infoText1 {
+    font-size: 17px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  #section .mapInfo .info .infoText2 {
+    font-size: 14px;
+    line-height: 30px;
+    margin: 10px 0 0;
+  }
+
+  #section .mapInfo .info .infoAddr {
+    font-size: 12.5px;
+    line-height: 30px;
+    margin: 30px 0 0;
+  }
+
+  #section .mapInfo .info .infoPhone {
+    font-size: 12.5px;
+    line-height: 30px;
+  }
+
+  #section .mapInfo .info .infoMail {
+    font-size: 12.5px;
+    line-height: 30px;
+  }
+
+  #section .mapInfo .info .infoBtn {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 20px 0 40px;
+  }
+
+  #section .mapInfo .info .infoBtn .normalInq {
+    margin: 0 10px 0 0;
+    color: #fff;
+    background: #000;
+    padding: 10px 30px;
+  }
+
+  #section .mapInfo .info .infoBtn .productInq {
+    color: #fff;
+    background: #333;
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* footer */
+  #footer {
+    padding: 25px 20px;
+  }
+
+  #footer .footerInfo {
+    /* width: 100%; */
+    display: block;
+    /* justify-content: space-between; */
+  }
+
+  #footer .row .footerInfo .logo {
+    /* float: left; */
+    /* left: 100%; */
+    /* padding: 10px; */
+  }
+
+  #footer .row .footerInfo .companyInfo {
+    /* float: right; */
+    /* width: 70%; */
+    /* margin-left: 5%; */
+    /* flex: 0 0 75%; */
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    display: block;
+    /* flex-direction: column; */
+    text-align: center;
+  }
+
+  #footer span {
+    display: block;
+  }
+
+  #footer span.slash {
+    display: none;
+  }
+
+  #footer .row .footerInfo .companyAddr {
+    margin: 13px 0 0 0;
+    /* line-height: 16px; */
+    /* overflow: hidden; */
+    display: block;
+    justify-content: space-between;
+  }
+
+  #footer .companyAddr .sns {
+    float: right;
+    right: 0;
+    width: 100%;
+    font-size: 14px;
+    padding: 20px 0;
+  }
+}

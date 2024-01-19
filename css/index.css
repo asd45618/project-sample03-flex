@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.headerRow {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ===================== header ===================== */
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+#header .headerRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header h1 {
+  /* float: left; */
+  padding: 13px 0 0;
+}
+
+#header .menuOpen {
+  display: none;
+}
+
+#header .nav {
+  /* float: right; */
+}
+
+#header .nav .depth1 {
+  display: flex;
+}
+
+#header .nav .depth1 > li {
+  /* width: 160px; */
+  /* float: left; */
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 18px;
+  position: relative;
+}
+
+#header .nav li > a {
+  display: block;
+  height: 90px;
+  line-height: 90px;
+  padding: 0 30px;
+}
+
+#header .nav .depth2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 13px;
+  color: #222;
+  background: #fff;
+  display: none;
+}
+
+#header .nav .depth1 > li:hover .depth2 {
+  display: block;
+}
+
+#header .nav .depth2 > li > a {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  transition: 300ms ease-out 0ms;
+  border-top: 1px solid #fff;
+  margin: 0;
+}
+
+#header .nav .depth2 > li > a:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===================== section > slideOuter > slideInner > slide ===================== */
+
+#section .slideOuter .slideInner .slick-arrow {
+  position: absolute;
+  top: 50%;
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#section .slideOuter .slideInner .slick-next {
+  right: 50px;
+}
+
+#section .slideOuter .slideInner .slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+
+#section .slideOuter .slideInner {
+  position: relative;
+}
+
+#section .slideOuter .slideInner .slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+}
+
+#section .slideOuter .slideInner .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+#section .slideOuter .slideInner .slick-dots .slick-active button {
+  background: rgba(255, 255, 255, 1);
+}
+
+#section .slideOuter .slideInner .slick-dots li button {
+  width: 9px;
+  height: 9px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  border: none;
+  text-indent: 100px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#section .slideOuter {
+  position: relative;
+}
+
+#section .slideOuter .plapau {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 50px;
+}
+
+#section .slide {
+  position: relative;
+  height: 60vw;
+}
+
+#section .slide1 {
+  background: url(../images/main01.jpg) no-repeat center / cover;
+}
+
+#section .slide2 {
+  background: url(../images/main02.jpg) no-repeat center / cover;
+}
+
+#section .slide3 {
+  background: url(../images/main03.jpg) no-repeat center / cover;
+}
+
+#section .slide4 {
+  background: url(../images/main04.jpg) no-repeat center / cover;
+}
+
+#section .slide .text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Noto Sans KR";
+  color: #fff;
+  text-align: center;
+}
+
+#section .slide .text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #444;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+
+#section .slick-current.slick-active .text h2 {
+  animation: fadeInUp 1s 1 both 0.3s;
+}
+
+#section .slide .text p {
+  margin: 40px 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px #444;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+
+#section .slick-current.slick-active .text p {
+  animation: fadeInUp 1s 1 both 1.3s;
+}
+
+/* ===================== section > introduction===================== */
+
+#section .introduction {
+  margin: 0 0 80px 0;
+}
+
+#section .introduction .introText {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  letter-spacing: -1;
+  color: #333;
+  margin: 100px 0 80px;
+  text-align: center;
+}
+
+#section .introduction .introText h2 {
+  margin: 0 0 20px 0;
+  font-size: 40px;
+}
+
+#section .introduction .introText p {
+  font-size: 17px;
+}
+
+#section .introduction .row {
+  max-width: 1200px;
+}
+
+#section .introduction .row .photo ul {
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#section .introduction .row .photo ul li {
+  /* float: left; */
+  /* width: 33.33%; */
+  margin: 0 auto;
+}
+
+#section .introduction .row .photo ul li > a > img {
+  transition: all 2s;
+}
+
+#section .introduction .row .photo ul li > a > img:hover {
+  transform: scale(0.99);
+  opacity: 0.6;
+}
+
+#section .introduction .row .photo .text {
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  color: #555;
+}
+
+#section .introduction .row .photo .text h3 {
+  font-size: 20px;
+  margin: 30px 0 20px;
+  letter-spacing: -1px;
+}
+
+#section .introduction .row .photo .text p {
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+#section .introduction .row .photo .text a {
+  display: block;
+  font-size: 12px;
+  color: #000;
+  margin: 20px 0;
+}
+
+/* ====================== goodsInfo ======================= */
+
+#section .goodsInfo {
+  padding: 100px 0 135px;
+  background-color: #fafafa;
+}
+
+#section .goodsInfo .row {
+  max-width: 100%;
+  /* overflow: hidden; */
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#section .goodsInfo .videoBox {
+  /* float: left; */
+  width: 50%;
+}
+
+#section .goodsInfo .videoBox > iframe {
+  width: 100%;
+  height: 30vw;
+}
+
+#section .goodsInfo .goodsExplantion {
+  /* float: right;
+  width: 50%; */
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  letter-spacing: -1px;
+}
+
+#section .goodsInfo .goodsExplantion p.textLine {
+  margin: 50px 15% 0 15%;
+}
+
+#section .goodsInfo .goodsExplantion p.goodsName {
+  font-size: 45px;
+  color: #1a1a1a;
+  margin: 10px 15% 0 15%;
+  line-height: 55px;
+}
+
+#section .goodsInfo .goodsExplantion p.text1 {
+  font-size: 20px;
+  color: #222;
+  margin: 30px 15% 0 15%;
+  line-height: 40px;
+}
+
+#section .goodsInfo .goodsExplantion p.text2 {
+  font-size: 14px;
+  color: #666;
+  margin: 20px 15% 0 15%;
+  letter-spacing: -1px;
+  line-height: 28px;
+  /* 단어 잘림 허용 안함 */
+  word-break: keep-all;
+}
+
+#section .goodsInfo .goodsExplantion > a {
+  display: block;
+  font-size: 15px;
+  color: #666;
+  margin: 70px 15% 0 15%;
+}
+
+/* ======================== businessArea ======================== */
+
+#section .businessArea {
+  margin: 100px 0 80px;
+  text-align: center;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  color: #333;
+  letter-spacing: -1px;
+}
+
+#section .businessArea .businessAreaText .topText {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+#section .businessArea .businessAreaText .midText {
+  font-size: 17px;
+  line-height: 28px;
+  margin: 20px 0 0;
+}
+
+/* ======================== product ======================== */
+
+#section .product {
+  margin: 0 0 120px;
+  text-align: center;
+}
+
+#section .product .row {
+  max-width: 1200px;
+}
+
+#section .product .row .productImg ul {
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#section .product .row .productImg ul li {
+  /* float: left;
+  width: 20%; */
+  padding: 10px;
+  flex: 1 1 20%;
+}
+
+#section .product .row .productImg ul li a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+#section .product .row .productImg ul li img {
+  transition: all 0.5s;
+  transform-origin: center top;
+}
+
+#section .product .row .productImg ul li:hover img {
+  transform: scale(1.1);
+}
+
+#section .product .row .productImg ul li a .overBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding-top: 65%;
+  opacity: 0;
+  color: #fff;
+  transition: all 0.5s;
+}
+
+#section .product .row .productImg ul li:hover .overBox {
+  opacity: 1;
+}
+
+/* ======================== service ======================== */
+
+#section .service {
+  background: url(../images/banner04.jpg) no-repeat center / cover;
+  text-align: center;
+  width: 100%;
+  height: 580px;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  color: #333;
+  letter-spacing: -1px;
+}
+
+#section .service div.text1 {
+  font-size: 40px;
+  line-height: 50px;
+  padding: 110px 0 0;
+}
+
+#section .service div.text2 {
+  font-size: 17px;
+  line-height: 28px;
+  padding: 20px 0 0;
+}
+
+/* ======================== mapInfo ======================== */
+
+#section .mapInfo .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section .mapInfo .map {
+  /* float: left; */
+  width: 50%;
+  height: 379px;
+  margin: 0 0 80px;
+}
+
+#section .mapInfo > .row {
+  margin: -200px auto 0;
+  max-width: 1200px;
+  background: #fff;
+  overflow: hidden;
+}
+
+#section .mapInfo .info {
+  /* float: right; */
+  /* width: 50%; */
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  color: #333;
+  letter-spacing: -1px;
+}
+
+#section .mapInfo .info .infoText1 {
+  font-size: 25px;
+  line-height: 40px;
+  margin: 60px 0 0;
+}
+
+#section .mapInfo .info .infoText2 {
+  font-size: 17px;
+  line-height: 30px;
+  margin: 10px 0 0;
+}
+
+#section .mapInfo .info .infoAddr {
+  font-size: 14px;
+  line-height: 30px;
+  margin: 30px 0 0;
+}
+
+#section .mapInfo .info .infoPhone {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+#section .mapInfo .info .infoMail {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+#section .mapInfo .info .infoBtn {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 70px 0 0;
+}
+
+#section .mapInfo .info .infoBtn .normalInq {
+  margin: 0 10px 0 0;
+  color: #fff;
+  background: #000;
+  padding: 15px 60px;
+}
+
+#section .mapInfo .info .infoBtn .productInq {
+  color: #fff;
+  background: #333;
+  padding: 15px 60px;
+}
+
+/* ======================== footer ======================== */
+
+#footer {
+  border-top: 1px solid #e1e1e1;
+  padding: 40px 0 40px 0;
+}
+
+#footer > .row {
+  width: 1200px;
+}
+
+#footer .footerInfo {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer .row .footerInfo .logo {
+  /* float: left; */
+  /* left: 20%; */
+}
+
+#footer .row .footerInfo .companyInfo {
+  /* float: right; */
+  /* width: 70%; */
+  /* margin-left: 5%; */
+  flex: 0 0 75%;
+  font-family: "Noto Sans KR";
+  font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer .row .footerInfo .companyInfo .tagA > a {
+  font-size: 13px;
+  text-align: center;
+  padding: 0 3px 0 8px;
+}
+
+#footer .row .footerInfo .companyAddr {
+  margin: 13px 0 0 0;
+  /* line-height: 16px; */
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* #footer .row .footerInfo .copyright {
+  margin: 3px 0 0 8px;
+} */
+
+#footer .row .footerInfo {
+  /* overflow: hidden; */
+}
+
+#footer .companyAddr .companyAddrLeft {
+  /* float: left; */
+  /* left: 0; */
+}
+
+#footer .companyAddr .sns {
+  /* float: right; */
+  /* right: 0; */
+  font-size: 14px;
+}
+
+#footer .companyAddr .sns i {
+  margin-left: 20px;
+}
